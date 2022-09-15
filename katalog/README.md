@@ -1,3 +1,10 @@
+Nama : Vania Azria Wardani  
+NPM : 2106650380    
+Tugas 2 PBP
+
+## Link Heroku App
+https://tugas-2-pbp-vania.herokuapp.com/katalog/
+
 ## Answer
 ```shell
 Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html
