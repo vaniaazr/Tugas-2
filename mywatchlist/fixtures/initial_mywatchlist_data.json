@@ -1,0 +1,112 @@
+[
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":true,
+        "title":"The Maze Runner",
+        "rating":4,
+        "release_date":"2014",
+        "review":"Oke"
+    }
+},
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":"iPhone 14 Pro Maag",
+        "title":"14000000",
+        "rating":"Bikin sakit Maag karena harganya mahal.",
+        "release_date":"",
+        "review":""
+    }
+},
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":"iPhone 14 Pro Maag",
+        "title":"14000000",
+        "rating":"Bikin sakit Maag karena harganya mahal.",
+        "release_date":"",
+        "review":""
+    }
+},
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":"iPhone 14 Pro Maag",
+        "title":"14000000",
+        "rating":"Bikin sakit Maag karena harganya mahal.",
+        "release_date":"",
+        "review":""
+    }
+},
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":"iPhone 14 Pro Maag",
+        "title":"14000000",
+        "rating":"Bikin sakit Maag karena harganya mahal.",
+        "release_date":"",
+        "review":""
+    }
+},
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":"iPhone 14 Pro Maag",
+        "title":"14000000",
+        "rating":"Bikin sakit Maag karena harganya mahal.",
+        "release_date":"",
+        "review":""
+    }
+},
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":"iPhone 14 Pro Maag",
+        "title":"14000000",
+        "rating":"Bikin sakit Maag karena harganya mahal.",
+        "release_date":"",
+        "review":""
+    }
+},
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":"iPhone 14 Pro Maag",
+        "title":"14000000",
+        "rating":"Bikin sakit Maag karena harganya mahal.",
+        "release_date":"",
+        "review":""
+    }
+},
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":"iPhone 14 Pro Maag",
+        "title":"14000000",
+        "rating":"Bikin sakit Maag karena harganya mahal.",
+        "release_date":"",
+        "review":""
+    }
+},
+{
+    "model":"mywatchlist.MyWatchlist",
+    "pk":1,
+    "fields":{
+        "watched":"iPhone 14 Pro Maag",
+        "title":"14000000",
+        "rating":"Bikin sakit Maag karena harganya mahal.",
+        "release_date":"",
+        "review":""
+    }
+}
+]
