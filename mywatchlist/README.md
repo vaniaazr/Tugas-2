@@ -115,7 +115,7 @@ Untuk menyajikan data dalam format JSON, saya menambahkan potongan kode berikut 
     ```
 
 ***Checklist 6***
-Agar data dapat diakses melalui ketiga URL tersebut, saya menambahkan potongan kode di bawah pada urls.py
+Agar data dapat diakses melalui ketiga URL tersebut, saya menambahkan potongan kode di bawah pada urls.py.
 ```
 urlpatterns = [
     path('html/', show_html, name='show_html'),
@@ -126,5 +126,5 @@ urlpatterns = [
 ```
 Path 1 untuk html, 2 untuk xml, dan 3 untuk json
 
-***Checklist 7***
+***Checklist 7***   
 Sebelum melakukan deploy saya pastikan seluruh URL dapat diakses dengan mengetik "python manage.py runserver" pada *command prompt*. Setelah itu saya lakukan add, commit, push untuk menyimpan perubahan. Lalu, saya membuka aplikasi Heroku dan memilih opsi "Deploy branch". Setelah proses *deployment* selesai, aplikasi dapat diakses.
