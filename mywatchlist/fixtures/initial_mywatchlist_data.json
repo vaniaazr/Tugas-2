@@ -7,106 +7,106 @@
         "title":"The Maze Runner",
         "rating":4,
         "release_date":"2014",
-        "review":"Oke"
+        "review":"One of the best science fiction movie ever"
     }
 },
 {
     "model":"mywatchlist.MyWatchlist",
-    "pk":1,
+    "pk":2,
     "fields":{
-        "watched":"iPhone 14 Pro Maag",
-        "title":"14000000",
-        "rating":"Bikin sakit Maag karena harganya mahal.",
-        "release_date":"",
-        "review":""
+        "watched":true,
+        "title":"A Quite Place",
+        "rating":4,
+        "release_date":"2018",
+        "review":"Nerve-wracking"
     }
 },
 {
     "model":"mywatchlist.MyWatchlist",
-    "pk":1,
+    "pk":3,
     "fields":{
-        "watched":"iPhone 14 Pro Maag",
-        "title":"14000000",
-        "rating":"Bikin sakit Maag karena harganya mahal.",
-        "release_date":"",
-        "review":""
+        "watched":true,
+        "title":"Mencuri Raden Saleh",
+        "rating":4,
+        "release_date":"2022",
+        "review":"The combination of Tuktuk and Gofar is perfect"
     }
 },
 {
     "model":"mywatchlist.MyWatchlist",
-    "pk":1,
+    "pk":4,
     "fields":{
-        "watched":"iPhone 14 Pro Maag",
-        "title":"14000000",
-        "rating":"Bikin sakit Maag karena harganya mahal.",
-        "release_date":"",
-        "review":""
+        "watched":false,
+        "title":"Clueless",
+        "rating":0,
+        "release_date":"1995",
+        "review":"Not watched"
     }
 },
 {
     "model":"mywatchlist.MyWatchlist",
-    "pk":1,
+    "pk":5,
     "fields":{
-        "watched":"iPhone 14 Pro Maag",
-        "title":"14000000",
-        "rating":"Bikin sakit Maag karena harganya mahal.",
-        "release_date":"",
-        "review":""
+        "watched":false,
+        "title":"Enola Holmes",
+        "rating":0,
+        "release_date":"2020",
+        "review":"Not watched"
     }
 },
 {
     "model":"mywatchlist.MyWatchlist",
-    "pk":1,
+    "pk":6,
     "fields":{
-        "watched":"iPhone 14 Pro Maag",
-        "title":"14000000",
-        "rating":"Bikin sakit Maag karena harganya mahal.",
-        "release_date":"",
-        "review":""
+        "watched":true,
+        "title":"Knives Out",
+        "rating":5,
+        "release_date":"2019",
+        "review":"Mind-blowing"
     }
 },
 {
     "model":"mywatchlist.MyWatchlist",
-    "pk":1,
+    "pk":7,
     "fields":{
-        "watched":"iPhone 14 Pro Maag",
-        "title":"14000000",
-        "rating":"Bikin sakit Maag karena harganya mahal.",
-        "release_date":"",
-        "review":""
+        "watched":true,
+        "title":"Wild Child",
+        "rating":5,
+        "release_date":"2018",
+        "review":"Everyone's comfort movie"
     }
 },
 {
     "model":"mywatchlist.MyWatchlist",
-    "pk":1,
+    "pk":8,
     "fields":{
-        "watched":"iPhone 14 Pro Maag",
-        "title":"14000000",
-        "rating":"Bikin sakit Maag karena harganya mahal.",
-        "release_date":"",
-        "review":""
+        "watched":false,
+        "title":"Ivanna",
+        "rating":0,
+        "release_date":"2022",
+        "review":"Not watched"
     }
 },
 {
     "model":"mywatchlist.MyWatchlist",
-    "pk":1,
+    "pk":9,
     "fields":{
-        "watched":"iPhone 14 Pro Maag",
-        "title":"14000000",
-        "rating":"Bikin sakit Maag karena harganya mahal.",
-        "release_date":"",
-        "review":""
+        "watched":true,
+        "title":"Pitch Perfect",
+        "rating":4,
+        "release_date":"2012",
+        "review":"A perfectly charming and good hearted movie"
     }
 },
 {
     "model":"mywatchlist.MyWatchlist",
-    "pk":1,
+    "pk":10,
     "fields":{
-        "watched":"iPhone 14 Pro Maag",
-        "title":"14000000",
-        "rating":"Bikin sakit Maag karena harganya mahal.",
-        "release_date":"",
-        "review":""
+        "watched":false,
+        "title":"The Edge of Seventeen",
+        "rating":0,
+        "release_date":"2016",
+        "review":"Not watched"
     }
 }
 ]
