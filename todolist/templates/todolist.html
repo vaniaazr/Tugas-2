@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Your TODO</title>
+{% endblock meta %}
+
+{% block content %}
+<h1>Hello! {{ user.get_username }} ˚ ༘♡ ⋆｡˚  (⊃｡•́‿•̀｡)⊃🪄☆ﾟ.*･｡ﾟ</h1>
+<h3>This is your TODO list</h3>
+
+<html>
+<style>
+table, th {
+  border:1px solid black;
+}
+</style>
+<body>
+    
+
+<table style="width:100%">
+    <tr>
+    <th style="background-color: #697eb7">Date style</th>
+    <th style="background-color: #697eb7">Title</th>
+    <th style="background-color: #697eb7">Description</th>
+    </tr>
+    {% for task in task %}
+    <tr>
+    <td>{{ task.date }}</td>
+    <td>{{ task.title }}</td>
+    <td>{{ task.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>Good luck and fighting!</h3>
+
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<style>
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.button {
+  background-color: #697eb7;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid black;
+  transition-duration: 0.3s;
+}
+</style>
+</head>
+<body>
+
+<a href="{% url 'todolist:create_todolist' %}" class="button">Create New TODO List</a>
+<a href="{% url 'todolist:logout' %}" class="button">Logout</a>
+
+
+{% endblock content %}
