@@ -7,6 +7,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from todolist.forms import FormTask
 from todolist.models import Task
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
 
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
@@ -15,20 +18,29 @@ def show_todolist(request):
     return render(request, "todolist.html", context)
 
 def create_todolist(request):
+    form = FormTask()
     if request.method == "POST":
         form = FormTask(request.POST)
+        form.instance.user = request.user
         if form.is_valid():
-            form = Task(
-                title=form.cleaned_data["title"],
-                description=form.cleaned_data["description"],
-                user=request.user,
-            )
             form.save()
             return redirect("todolist:show_todolist")
-
-    form = FormTask()
     context = {'form': form}
     return render(request, "create_task.html", context)
+
+def status(request, id):
+    status = Task.objects.get(pk=id)
+    if status.is_finished:
+        status.is_finished = False
+    else:
+        status.is_finished = True
+    status.save()
+    return HttpResponseRedirect(reverse('todolist:show_todolist'))
+
+def delete(request, id):
+    delete = Task.objects.get(pk=id)
+    delete.delete()
+    return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
 def register(request):
     form = UserCreationForm()
