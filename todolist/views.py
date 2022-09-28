@@ -10,7 +10,6 @@ from todolist.models import Task
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
     data_task = Task.objects.filter(user=request.user).all()
