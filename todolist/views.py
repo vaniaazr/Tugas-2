@@ -21,10 +21,15 @@ def create_todolist(request):
     form = FormTask()
     if request.method == "POST":
         form = FormTask(request.POST)
-        form.instance.user = request.user
         if form.is_valid():
+            form = Task(
+                title=form.cleaned_data["title"],
+                description=form.cleaned_data["description"],
+                user=request.user,
+            )
             form.save()
             return redirect("todolist:show_todolist")
+
     context = {'form': form}
     return render(request, "create_task.html", context)
 
