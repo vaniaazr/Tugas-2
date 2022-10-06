@@ -227,23 +227,40 @@ Proses terdiri dari beberapa langkah, yaitu
 
 ## **Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?**
 
-- Inline style: Properti CSS berada di dalam baris tag HTML atribut elemen. Kelebihannya adalah memiliki priority tertinggi dibanding style lainnya dan berguna untuk memperbaiki kode dengan cepat. Kekurangannya adalah tidak efisien karena hanya bisa diterapkan pada satu elemen HTML      
-- Internal Style Sheet: Kumpulan properti CSS berada di dalam file HTML yang sama, tepatnya pada bagian head dengan tag `<style>`. Kelebihannya adalah dapat mengubah tampilan dalam satu halaman tanpa perlu melakukan upload beberapa file. Kekurangannya adalah tidak efisien jika ingin menggunakan CSS yang sama dalam beberapa file     
-- External Style Sheet: Properti CSS berada pada file terpisah dengan HTML yang harus ditautkan menggunakan tag `<link>`. Kelebihannya adalah file CSS dapat digunakan di beberapa halaman website sekaligus sehingga mudah untuk melakukan maintenance. Kekurangannya adalah memiliki priority terendah dibanding style lainnya dan halaman akan menjadi berantakan jika file CSS gagal dipanggil oleh file HTML  
+- **Inline**: Properti CSS berada di dalam baris tag HTML atribut elemen.   
+Kelebihan = Mempunyai priority tertinggi dibanding style lainnya yang berguna dalam mempercepat perbaikan kode  
+Kekurangan = Kurang efisien. Inline hanya dapat diterapkan pada satu elemen HTML      
+- **Internal**: Kumpulan properti CSS yang berada pada file HTML yang sama, yaitu bagian head dengan tag `<style>`.      
+Kelebihan = Dapat mengubah tampilan dalam satu halaman tanpa upload beberapa file.      
+Kekurangan = Kurang efiesien saat CSS yang sama digunakan dalam beberapa file     
+- **External**: Properti CSS yang berada pada file terpisah dengan HTML. External perlu ditautkan menggunakan tag `<link>`.     
+Kelebihan = Dapat digunakan di beberapa halaman website secara bersamaan. Hal ini memudahkan developer untuk melakukan maintenance.     
+Kekurangan = Mempunyai priority terendah dibanding style lainnya. Saat file CSS gagal dipanggil oleh HTML, halaman akan berantakan.
 
 ## **Jelaskan tag HTML5 yang kamu ketahui**
-`<a>` untuk mendefinisikan hyperlink.
-`<audio>` untuk menyematkan audio dalam halaman HTML.
-`<br>` untuk menghasilkan jeda single-line.
-`<button>` untuk membuat tombol yang dapat diklik.
-`<div>` untuk menentukan divisi atau bagian dalam dokumen.
-`<form>` untuk mendefinisikan form HTML untuk input pengguna.
-`<img>` untuk merepresentasikan gambar.
-`<input>` untuk mendefinisikan kontrol input.
-`<label>` untuk mendefinisikan label untuk kontrol <input>.
-`<link>` untuk mendefinisikan hubungan antara dokumen saat ini dan sumber daya eksternal.
-`<nav>` untuk mendefinisikan bagian dari navigasi.
-`<p>` untuk mendefinisikan paragraf.
+`<a>` untuk mendefinisikan hyperlink      
+`<br>` untuk menghasilkan jeda single-line  
+`<button>` untuk membuat tombol yang dapat diklik   
+`<colgroup>` untuk mengelompokkan nilai atribut untuk bebrapa kolom
+`<div>` untuk menentukan divisi atau bagian dalam dokumen   
+`<form>` untuk mendefinisikan form HTML untuk input pengguna 
+`<html>` untuk mendefinisikan dokumen html   
+`<img>` untuk merepresentasikan gambar  
+`<input>` untuk mendefinisikan kontrol input    
+`<label>` untuk mendefinisikan label untuk kontrol `<input>`    
+`<link>` untuk mendefinisikan hubungan antara dokumen saat ini dan sumber daya eksternal     
+`<p>` untuk mendefinisikan paragraf 
 `<style>` untuk menyisipkan informasi style (CSS) ke dalam head HTML
-`<title>` untuk mendefinisikan judul untuk dokumen.
-`<table>` untuk mendefinisikan tabel data
+`<title>` untuk mendefinisikan judul untuk dokumen  
+`<table>` untuk mendefinisikan tabel data 
+`<td>` untuk mendefinisikan baris pada tabel  
+
+## **Jelaskan tipe-tipe CSS selector yang kamu ketahui** 
+- Class Selector: menggunakan Class pada tag sebagai selector. Diawali dengan "."
+- Element Selector: menggunakan tag HTML sebagai selector yang berguna untuk mengubah properti dalam tag tersebut      
+- ID Selector: menggunakan ID pada tag sebagai selector. Diawali dengan "#"          
+
+## **Implementasi**
+1. Pada halaman login, register, dan create-task saya mengubah warna background, jenis font, warna button, dan posisi setiap elemennya menjadi di tengah. Agar backgroundnya tidak berantakan, saya juga set backgroundnya menjadi fixed.
+2. Pada halaman utama to do list saya menambahkan navigation bar berjudul "Welcome, {{nama}} !" serta button untuk logout. Saya mengubah cara penyajian task. Sebelumnya, saya menyajikan task hanya dengan tabel biasa. Pada tugas ini, saya mengubahnya menjadi bentuk card di mana setiap card merepresentasikan satu task. Setiap card mengandung button change (untuk mengubah status task) dan delete (untuk menghapus task). Selain itu, terdapat pula status pengerjaan pada card tersebut.
+3. Saya menggunakan CSS framework dan Bootstrap yang telah menyediakan layout yang responsif dengan breakpoint media queries yang telah ditentukan. Agar tampilannya semakin sesuai, saya juga melakukan beberapa adjustment terhadap breakpoint.
