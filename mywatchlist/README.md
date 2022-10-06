@@ -57,7 +57,7 @@ JSON
 3. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 ```
 ***Checklist 1***   
-Untuk membuat aplikasi mywatchlist, saya menerapkan perintah "ython manage.py startapp wishlist" pada cmd direktori tugas 2. Setelah itu, saya menambahkan beberapa konfigurasi yang dibutuhkan pada *file* settings.py dan models.py. 
+Untuk membuat aplikasi mywatchlist, saya menerapkan perintah "python manage.py startapp wishlist" pada cmd direktori tugas 2. Setelah itu, saya menambahkan beberapa konfigurasi yang dibutuhkan pada *file* settings.py dan models.py. 
 
 ***Checklist 2***   
 Agar pengguna dapat mengakses mywatchlist dari link localhost, saya mendaftarkan aplikasi mywatchlist pada variabel urlspatterns di direktori project_django. Potongan kode yang digunakan adalah "path('mywatchlist/', include('mywatchlist.urls')),"

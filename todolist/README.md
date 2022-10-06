@@ -2,8 +2,11 @@
 **Nama  : Vania Azria Wardani**  
 **NPM   : 2106650380**    
 **Kelas : C**     
-**Tugas 4**     
+**Tugas 4**
+**Tugas 5**     
 **Pemograman Berbasis Platform**
+
+# Tugas 4
 
 # Link Heroku App
 ```none:``` https://tugas-2-pbp-vania.herokuapp.com/todolist/  
@@ -218,3 +221,29 @@ Proses terdiri dari beberapa langkah, yaitu
 - Melakukan deployment ke Heroku terhadap aplikasi yang sudah kamu buat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet
 
     Memastikan segala dokumen yang diperlukan sudah lengkap dan tersedia, salah satunya kelengkapan secrects GitHub. Untuk menyimpan perubahan, lakukan git add, commit, dan push pada GitHub. Menunggu proses deployment. Setelah deployment selesai, aplikasi Heroku dapat langsung diakses.
+
+
+# Tugas 5
+
+## **Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?**
+
+- Inline style: Properti CSS berada di dalam baris tag HTML atribut elemen. Kelebihannya adalah memiliki priority tertinggi dibanding style lainnya dan berguna untuk memperbaiki kode dengan cepat. Kekurangannya adalah tidak efisien karena hanya bisa diterapkan pada satu elemen HTML      
+- Internal Style Sheet: Kumpulan properti CSS berada di dalam file HTML yang sama, tepatnya pada bagian head dengan tag `<style>`. Kelebihannya adalah dapat mengubah tampilan dalam satu halaman tanpa perlu melakukan upload beberapa file. Kekurangannya adalah tidak efisien jika ingin menggunakan CSS yang sama dalam beberapa file     
+- External Style Sheet: Properti CSS berada pada file terpisah dengan HTML yang harus ditautkan menggunakan tag `<link>`. Kelebihannya adalah file CSS dapat digunakan di beberapa halaman website sekaligus sehingga mudah untuk melakukan maintenance. Kekurangannya adalah memiliki priority terendah dibanding style lainnya dan halaman akan menjadi berantakan jika file CSS gagal dipanggil oleh file HTML  
+
+## **Jelaskan tag HTML5 yang kamu ketahui**
+`<a>` untuk mendefinisikan hyperlink.
+`<audio>` untuk menyematkan audio dalam halaman HTML.
+`<br>` untuk menghasilkan jeda single-line.
+`<button>` untuk membuat tombol yang dapat diklik.
+`<div>` untuk menentukan divisi atau bagian dalam dokumen.
+`<form>` untuk mendefinisikan form HTML untuk input pengguna.
+`<img>` untuk merepresentasikan gambar.
+`<input>` untuk mendefinisikan kontrol input.
+`<label>` untuk mendefinisikan label untuk kontrol <input>.
+`<link>` untuk mendefinisikan hubungan antara dokumen saat ini dan sumber daya eksternal.
+`<nav>` untuk mendefinisikan bagian dari navigasi.
+`<p>` untuk mendefinisikan paragraf.
+`<style>` untuk menyisipkan informasi style (CSS) ke dalam head HTML
+`<title>` untuk mendefinisikan judul untuk dokumen.
+`<table>` untuk mendefinisikan tabel data

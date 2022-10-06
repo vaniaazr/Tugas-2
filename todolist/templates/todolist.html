@@ -1,71 +1,67 @@
 {% extends 'base.html' %}
 
 {% block meta %}
-<title>Your TODO</title>
+<title>To Do List</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  head, body {
+    font-family: 'Montserrat', sans-serif;
+    height: auto;
+  }
+
+  body {
+    align-items: center;
+    background: linear-gradient(rgb(178, 233, 255), rgb(89, 131, 230));
+    background-size: 100% 100%;
+    background-attachment: fixed; 
+  }
+
+  .card:hover{
+    transform:rotateZ(15deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+</style>
 {% endblock meta %}
 
 {% block content %}
-<h1>Hello! {{ user.get_username }} ˚ ༘♡ ⋆｡˚  (⊃｡•́‿•̀｡)⊃🪄☆ﾟ.*･｡ﾟ</h1>
-<h3>This is your TODO list</h3>
-
-<html>
-<head>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-<style>
-table, th {
-  border:1px solid black;
-}
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-.button {
-  background-color: #e8a5b0;
-  border: none;
-  color: black;
-  padding: 13px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
-  border: 1px solid black;
-}
-</style>
-</head>
-<body>
-    
-
-<table style="width:100%">
-    <tr>
-    <th style="background-color: #697eb7">Date</th>
-    <th style="background-color: #697eb7">Title</th>
-    <th style="background-color: #697eb7">Description</th>
-    <th style="background-color: #697eb7">Progress</th>
-    <th style="background-color: #697eb7">Change Progress</th>
-    <th style="background-color: #697eb7">Delete Task</th>
-    </tr>
-    {% for task in task %}
-    <tr>
-        <td>{{ task.date }}</td>
-        <td>{{ task.title }}</td>
-        <td>{{ task.description }}</td>
-        {% if task.is_finished %}
-        <td>Finished</td>
-        {% else %}
-        <td>Not Finished</td>
-        {% endif %}
-        <td style="text-align: center"><a href="{% url 'todolist:status' task.id %}" class="button" style="padding: 7px 15px;">Change Progress</a></button></td>
-        <td style="text-align: center"><a href="{% url 'todolist:delete' task.id %}" class="button"style="padding: 7px 15px;">❌</a></button></td>
-    </tr>
-    {% endfor %}
-</table>
-
-<h3>Good luck and fighting!</h3>
-
-<a href="{% url 'todolist:create_todolist' %}" class="button">Create New TODO List</a>
-<a href="{% url 'todolist:logout' %}" class="button">Logout</a>
-
-
+<div class="todo w-100 m-auto text-center">
+  <nav class="navbar navbar-dark bg-dark mb-5">
+    <div class="container-fluid">
+        <h1 class="navbar-brand fw-bold mb-2 mt-2 text-light">Welcome, {{user.get_username}} !</h1>
+        <button class="btn btn-primary btn-md fw-bold" type="button" onclick="location.href='/todolist/logout'">Logout</button>
+    </div>
+  </nav>
+  <div class="todolist text-center">
+    <h2 class="h1 mb-3 text-primary fw-bold">To Do List</h2>
+    <div class="container">
+      <div class="row row-cols-1 g-4 m-auto">
+        {% for task in task %}
+        <div class="col">
+          <div class="card border-primary shadow m-auto h-100" style="width:20rem;">
+            <div class="card-header">
+              <h6 class="card-subtitle">{{task.date}}</h6>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title fw-bold">{{task.title}}</h4>    
+              <p class="card-text">{{task.description}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              {% if task.is_finished %}
+              <li class="list-group-item text-primary fw-semibold">Finished</li>
+              {% else %}
+              <li class="list-group-item text-primary fw-semibold">Not Finished</li>
+              {% endif %}
+            </ul>
+            <div class="card-footer">
+              <a class="text-light fw-semibold; btn btn-dark btn-sm" href="{% url 'todolist:status' task.id %}">Change</a></button>
+              <a class="text-light fw-semibold; btn btn-danger btn-sm" href="{% url 'todolist:delete' task.id %}">Delete</a></button>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary btn-lg mt-4 mb-4 fw-bold" onclick="location.href='/todolist/create-task'">Create New Task</button> 
+</div>
 {% endblock content %}
