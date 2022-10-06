@@ -227,33 +227,33 @@ Proses terdiri dari beberapa langkah, yaitu
 
 ## **Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?**
 
-- **Inline**: Properti CSS berada di dalam baris tag HTML atribut elemen.   
+- **Inline**: Properti CSS berada di dalam baris tag HTML atribut elemen        
 Kelebihan = Mempunyai priority tertinggi dibanding style lainnya yang berguna dalam mempercepat perbaikan kode  
-Kekurangan = Kurang efisien. Inline hanya dapat diterapkan pada satu elemen HTML      
+Kekurangan = Kurang efisien. Inline hanya dapat diterapkan pada satu elemen HTML              
 - **Internal**: Kumpulan properti CSS yang berada pada file HTML yang sama, yaitu bagian head dengan tag `<style>`.      
-Kelebihan = Dapat mengubah tampilan dalam satu halaman tanpa upload beberapa file.      
-Kekurangan = Kurang efiesien saat CSS yang sama digunakan dalam beberapa file     
-- **External**: Properti CSS yang berada pada file terpisah dengan HTML. External perlu ditautkan menggunakan tag `<link>`.     
-Kelebihan = Dapat digunakan di beberapa halaman website secara bersamaan. Hal ini memudahkan developer untuk melakukan maintenance.     
-Kekurangan = Mempunyai priority terendah dibanding style lainnya. Saat file CSS gagal dipanggil oleh HTML, halaman akan berantakan.
+Kelebihan = Dapat mengubah tampilan dalam satu halaman tanpa upload beberapa file            
+Kekurangan = Kurang efiesien saat CSS yang sama digunakan dalam beberapa file         
+- **External**: Properti CSS yang berada pada file terpisah dengan HTML. External perlu ditautkan menggunakan tag `<link>`         
+Kelebihan = Dapat digunakan di beberapa halaman website secara bersamaan. Hal ini memudahkan developer untuk melakukan maintenance          
+Kekurangan = Mempunyai priority terendah dibanding style lainnya. Saat file CSS gagal dipanggil oleh HTML, halaman akan berantakan           
 
 ## **Jelaskan tag HTML5 yang kamu ketahui**
 `<a>` untuk mendefinisikan hyperlink      
 `<br>` untuk menghasilkan jeda single-line  
-`<button>` untuk membuat tombol yang dapat diklik   
-`<colgroup>` untuk mengelompokkan nilai atribut untuk bebrapa kolom
+`<button>` untuk membuat tombol yang dapat diklik          
+`<colgroup>` untuk mengelompokkan nilai atribut untuk bebrapa kolom     
 `<div>` untuk menentukan divisi atau bagian dalam dokumen   
-`<form>` untuk mendefinisikan form HTML untuk input pengguna 
-`<html>` untuk mendefinisikan dokumen html   
-`<img>` untuk merepresentasikan gambar  
-`<input>` untuk mendefinisikan kontrol input    
-`<label>` untuk mendefinisikan label untuk kontrol `<input>`    
-`<link>` untuk mendefinisikan hubungan antara dokumen saat ini dan sumber daya eksternal     
-`<p>` untuk mendefinisikan paragraf 
-`<style>` untuk menyisipkan informasi style (CSS) ke dalam head HTML
-`<title>` untuk mendefinisikan judul untuk dokumen  
-`<table>` untuk mendefinisikan tabel data 
-`<td>` untuk mendefinisikan baris pada tabel  
+`<form>` untuk mendefinisikan form HTML untuk input pengguna        
+`<html>` untuk mendefinisikan dokumen html      
+`<img>` untuk merepresentasikan gambar          
+`<input>` untuk mendefinisikan kontrol input          
+`<label>` untuk mendefinisikan label untuk kontrol `<input>`     
+`<link>` untuk mendefinisikan hubungan antara dokumen saat ini dan sumber daya eksternal         
+`<p>` untuk mendefinisikan paragraf         
+`<style>` untuk menyisipkan informasi style (CSS) ke dalam head HTML        
+`<title>` untuk mendefinisikan judul untuk dokumen        
+`<table>` untuk mendefinisikan tabel data       
+`<td>` untuk mendefinisikan baris pada tabel         
 
 ## **Jelaskan tipe-tipe CSS selector yang kamu ketahui** 
 - Class Selector: menggunakan Class pada tag sebagai selector. Diawali dengan "."
