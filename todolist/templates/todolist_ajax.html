@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+    <title>To Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        head, body{
+            font-family: 'Montserrat', sans-serif;
+            height: 100vh;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgb(89, 131, 230);
+            transition: 0.3s;
+            width: 40%;    
+            border-radius: 5px;
+            background-color: rgb(252, 245, 95);
+        }
+            
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgb(89, 131, 230), 0 4px 8px rgb(89, 131, 230); 
+            background-color: rgb(77, 95, 217); 
+            color: rgb(252, 245, 95);  
+        }
+        
+        .container {
+            padding: 2px 16px;
+        }
+            
+        .content {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgb(178, 233, 255), rgb(89, 131, 230));
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        input, textarea {
+            padding: 0.5rem;
+            border: 1px solid;
+            border-radius: 8px;
+            width: 100%
+        } 
+    </style>
+{% endblock meta %}
+
+{% block content %}
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function posting(e) {
+          e.preventDefault()
+          const title = $("#title").val()
+          const description = $("#description").val()
+          
+          const data = {
+            title: title,
+            description: description,
+            csrfmiddlewaretoken: "{{ csrf_token }}"
+          }
+          
+          $.ajax({
+            type: 'POST',
+            url: '{% url "todolist:add_task" %}',
+            data: data,
+            dataType: 'json'
+          });
+
+          fetchData();
+        }
+      
+        function update(data) {
+          const myElement = $("#main-div")
+          myElement.html('');
+          for (let i = 0; i < data.length; i++) {
+            let message = (data[i].fields.is_finished) ? 'Done':'Not Done';
+            let color = (data[i].fields.is_finished) ? 'green':'red';
+            myElement.append(`
+              <div class="card col-sm-4 mb-1 mt-4 mx-auto" style="width: 18rem;">
+                <div class="card-body">
+                  <h4 class="card-title text-center fw-semibold">${data[i].fields.title}</h4>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-secondary">${data[i].fields.date}</li>
+                    <li class="list-group-item">${data[i].fields.description}</li>
+                  </ul>
+                </div>
+                <div class="card-footer text-center">
+                  <p style="font-weight:bold; color:${color};">${message}</p>
+                  <a class="text-light fw-semibold; btn btn-dark btn-sm" href="change-status/${data[i].pk}" style="text-decoration:solid ">Finish Task</a></button>
+                  <a class="text-light fw-semibold; btn btn-danger btn-sm" href=" delete-task/${data[i].pk}" style="text-decoration:solid ">Delete Task</a></button>
+                </div>
+              </div>
+            `)
+          }
+        }
+        function fetchData() {
+          $.get("/todolist/json", update)
+        }
+      
+        $(document).ready(() => {
+          $("#create-button").click(posting)
+          fetchData()
+        })
+    </script>
+  </head>
+  
+  <header>
+    <nav class="navbar navbar-expand-lg bg-light bg-gradient fixed-top" style="padding: auto;">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold mb-2 mt-2" href="#main-table">This is your TODO list, {{user.username}}!</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" style="margin: 5px;">
+              <a class="btn btn-primary" data-bs-toggle="modal" href="#addTask" role="button">Add Task</a>
+            </li>
+            <li class="nav-item" style="margin: 5px;">
+              <a class="btn btn-dark" href="{% url 'todolist:logout' %}" role="button">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div style="padding:5px;"></div>
+  
+  <div class="row row-cols-1 row-cols-md-3 g-4 md:justify-end gap-4" id="main-div"></div>
+  
+  <div class="modal fade" id="addTask" tabindex="-1" aria-labelledby="addTaskLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Add New Task</h1>
+        </div>
+        <div class="modal-body">
+          <form method="POST" action="" style="display: inline-block;">
+            {% csrf_token %}
+            <table>
+                <tr>
+                  <label>Title</label>
+                  <input type="text" name="title" id="title">
+                </tr>
+                <tr>
+                  <label>Description</label>
+                  <input type="textarea" name="description" id="description">
+                </tr>
+                    <td colspan="2">
+                      <input data-bs-dismiss="modal" style="width: 100%; margin-top: 20px; margin-bottom: 7px;" class="btn btn-primary" type="submit" name="submit" value="Create" id="create-button">
+                    </td>
+                </tr>
+            </table>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}
